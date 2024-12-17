@@ -4,10 +4,10 @@ import pandas as pd
 from ast import literal_eval
 import os
 import sys
-import pathlib
-folder_path = pathlib.Path(_file_).parent.resolve()
-sys.path.append(os.path.join(folder_path, '../'))
-from utils import load_subtitles_dataset  # Ensure this function is defined elsewhere
+import pathlib 
+folder_path = pathlib.Path(__file__).parent.resolve()
+sys.path.append(os.path.join(folder_path,'../'))
+from utils import load_subtitles_dataset
 
 class NamedEntityRecognizer:
     def _init_(self):
@@ -58,6 +58,4 @@ class NamedEntityRecognizer:
 
         # Save the result if save_path is provided
         if save_path is not None:
-            df.to_csv(save_path, index=False)
-
-        return df
+            df.to_csv(save_path,index=False)
