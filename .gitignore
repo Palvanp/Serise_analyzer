@@ -3,9 +3,9 @@ __pycache__/
 
 # Exclude .pyc files
 *.pyc
-
-# Exclude gradio folder
-naruto/Lib/site-packages/gradio/
+*.ipynb_checkpoints
+.env
 
 # Exclude entire 'Lib/site-packages' folder if needed
 naruto/Lib/site-packages/
+naruto/
