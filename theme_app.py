@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from theme_classifier import ThemeClassifier
-from character_network import NamedEntityRecognizer, CharacterNetworkGenerator
+from character_network_generator import NamedEntityRecognizer, CharacterNetworkGenerator
 
 # Function to get themes
 def get_themes(theme_list_str, subtitles_path, save_path):
@@ -69,5 +69,5 @@ def main():
             if html:
                 st.components.v1.html(html, height=600)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     main()
